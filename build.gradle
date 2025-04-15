@@ -1,12 +1,11 @@
 plugins {
-    id 'eclipse'
-    id 'idea'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0.24,6.2)'
+    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
 version = '0.0.1'
-mod_id = 'modtest'
+mod_id = 'posemod'
 group = 'com.gmail.therealsirpose'
 
 base {
@@ -103,17 +102,6 @@ publishing {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
-}
-
-// IntelliJ no longer downloads javadocs and sources by default.
-// This tells Gradle to force IDEA to do it.
-idea.module { downloadJavadoc = downloadSources = true }
-
-eclipse {
-    // Run everytime eclipse builds the code
-    //autoBuildTasks genEclipseRuns
-    // Run when importing the project
-    synchronizationTasks 'genEclipseRuns'
 }
 
 // Merge the resources and classes into the same directory. 

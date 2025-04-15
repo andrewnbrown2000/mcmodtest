@@ -7,7 +7,7 @@ showAsResourcePack=false
 clientSideOnly=false
 
 [[mods]]
-  modId="examplemod"
+  modId="posemod"
   version="0.0.1"
   displayName="Example Mod"
   updateJSONURL="https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json"
